@@ -2,3 +2,4 @@
 *.log
 .idea
 target
+scala_tour.iml

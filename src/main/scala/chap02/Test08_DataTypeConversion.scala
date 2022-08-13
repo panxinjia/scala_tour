@@ -29,6 +29,21 @@ object Test08_DataTypeConversion {
     val v2:Long = (i1.toInt + i2.toInt).toLong
     println(v2)
 
+    val x:Int = 3 * 12.1.toInt
+    println(x)
+    val y:Int = (3 * 12.1).toInt
+    println(y)
+
+    //Scala还提供了更强大的特性 -> 隐式函数, 隐式类
+
+    var s:String = "123.11"
+    println(s.toFloat)
+    println(s.toDouble)
+    println(s.toInt)
+    println(s.toLong)
+    // NumberFormatException 数据转换失败时, 对程序影响很大, 容易造成错误, 应当抛出异常.
+    println(s.toBoolean)
+
   }
 }
 
