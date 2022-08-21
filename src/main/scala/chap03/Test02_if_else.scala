@@ -4,7 +4,8 @@ object Test02_if_else {
 
 
   def main(args: Array[String]): Unit = {
-    // val age = StdIn.readInt()
+    // val age = StdIn.readInt() //StdIn 是伴生对象
+
     val age = 90
     // 分支语句带返回值, 作为逻辑判断和结果处理的表达 (process)
     // 函数式编程中, 最好也减少分支条件的使用, 减少子程序调用, 避免状态的意外变更 ☆

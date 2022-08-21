@@ -1,6 +1,11 @@
 package chap02;
 
 /**
+ * 数据类型转换, 编译器默认的处理行为
+ *
+ *                  char ->
+ * byte -> short -> int -> long
+ * float -> double
  * @author m1513
  */
 public class DataTypeConversion {

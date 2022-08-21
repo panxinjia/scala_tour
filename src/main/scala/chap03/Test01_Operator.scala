@@ -6,10 +6,9 @@ object Test01_Operator {
   def main(args: Array[String]): Unit = {
     val s1 = "jack"
     val s2 = new String("jack")
-    println(s1 == s2) // -> true,  java中为false
-    // 基础操作符, 比较的是基础值
-    println(s1.eq(s2)) // false, s1和s2 是不同的地址, 这是java和scala的区别点
-    println(s1.equals(s2))  // true
+    println(s1 == s2)
+    println(s1.eq(s2)) // false
+    println(s1.equals(s2)) // true   这里是和java的不同点
 
     // scala 中没有 ++ --, 可以用 += -= 替代
     var v = 20

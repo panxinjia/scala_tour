@@ -1,42 +1,41 @@
 package chap02
 
-import scala.reflect.internal.util.StringOps
-
 object Test04_String {
 
   def main(args: Array[String]): Unit = {
+    val name: String = "jack"
+    val age: Int = 30
+    val sal: Double = 30000.00
 
-    // 常量定义
-    val name = "alice"
-    // name = "jack"  常量不允许修改
-    val age = 20
+    // scala中字符串的三种使用方式
+    // 1. + 拼接
+    val s1: String = name + ", " + age + ", " + sal
+    println(s1)
 
-    // 运算符重载, 将name拼接3次
-    println(name * 3) // alicealicealice
+    // 2. 格式化字符串
+    printf("name = %s, age = %d, sal = %.2f\n", name, age, sal)
 
-    // 占位符格式化
-    printf("name = %s, age = %d", name, age)
+    // 3. 字符串差值语法
+    val s3: String = s"name = $name, age = ${age}, sal = ${sal}"
+    println(s3)
 
-    // 字符串插值, 格式化, 可读的字符串, s 模板字符串, f 格式化模板字符串
-    println(s"name = $name, age = $age")
+    // f 引用值时支持给出格式化符号
+    val s4 :String = f"name = ${name}"
+    println(s4)
 
-    val sal = 30001.239
-    println(f"$name sal = $sal%2.2f")
-
-    val sql =
-      """
-        |select *
-        |from emp e
-        |join dept d on e.deptId = d.deptId
-        |where e.id > 10
-        |group by deptId
-        |order by salary
-        |limit 10
-        |""".stripMargin
+    // 4. 多行字符串
+    val sql: String =
+      s"""
+         |select name, age, sal from users
+         |where name =  ${name}
+         |  and
+         |      age = ${age}
+         |  and
+         |      sal = ${sal}
+         |""".stripMargin
     println(sql)
 
 
-    // StringOps 为了兼容Java Scala定义的特殊类型
   }
 
 }
