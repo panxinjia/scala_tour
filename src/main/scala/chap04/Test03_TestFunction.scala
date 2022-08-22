@@ -2,6 +2,8 @@ package chap04
 
 /**
  * 函数式编程的语法灵活度很高, 需要多写多练才能熟悉
+ *
+ * 1. 函数式的语法, 匿名函数, 返回值
  */
 object Test03_TestFunction {
 
@@ -72,7 +74,8 @@ object Test03_TestFunction {
     val foo3: () => Unit = foo
 
 
-
+    // 不关心函数签名, 只关心具体逻辑
+    def bar:Int => Int = (value: Int) => value
 
 
   }
